@@ -1,8 +1,9 @@
 == Brain Clock!
 
-It's an awesome brain clock. Made with HTML5.
+It's an awesome brain clock. Made with HTML5 goodness.
 
 95% of the code is under app/assets/javascripts/clock.js.
 
-[brainclock.herokuapp.com](http://brainclock.herokuapp.com/)
+brainclock.herokuapp.com
+
 
