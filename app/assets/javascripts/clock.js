@@ -59,16 +59,16 @@ function drawScene() { // main drawScene function
     drawHand(1, 0, "rgba(246, 137, 31, 0.1)");
 
     // Hour Hand
-    var hourRotation = hours / 24;
-    drawHand(0.5, hourRotation, "rgba(246, 137, 31, 0.7)");
+    var hourRotation = hours / 12;
+    drawHand(0.35, hourRotation, "rgba(246, 137, 31, 0.7)");
 
     // Minute Hand
     var minuteRotation = minutes / 60;
-    drawHand(0.25, minuteRotation, "rgba(243, 109, 33, 0.7)");
+    drawHand(0.22, minuteRotation, "rgba(243, 109, 33, 0.7)");
 
     // Second Hand
     var secondRotation = seconds / 60;
-    drawHand(0.15, secondRotation, "rgba(128, 76, 25, 0.6)");
+    drawHand(0.13, secondRotation, "rgba(128, 76, 25, 0.6)");
 
     // Draw Numbers
     ctx.font = 'bold 55px Helvetica';
