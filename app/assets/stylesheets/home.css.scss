@@ -6,6 +6,12 @@ body {
   background-image: url("bg.png");
 }
 
+.clock-container{
+  position : relative;
+  max-width : 900px;
+  margin:0 auto;
+}
+
 .clock {
   width: 500px;
   height: 500px;
@@ -20,14 +26,46 @@ body {
   height: 500px;
 }
 
-.clock-header {
+.clock-header h1 {
   text-align: center;
   font-family: "Helvetica";
   color:rgb(33,33,33);
-  font-size: 40px;
+  font-size: 80px;
   margin:0px;
+  margin-top:30px;
+  margin-bottom:10px;
+  padding:0px;
+}
+
+.clock-subtitle h2 {
+  text-align: center;
+  font-family: "Helvetica";
+  color:rgb(33,33,33);
+  font-size: 18px;
+  margin:0px;
+  margin-bottom:40px;
+  padding:0px;
 }
 
 .github-link {
   position: absolute; top: 0; right: 0; border: 0;
 }
+
+#label-1 {
+  position:absolute;
+  left:-500px; right:0; top:300px;
+  text-align:center;
+}
+
+#label-2 {
+  position:absolute;
+  left:450px; right:0; top:250px;
+  text-align:center;
+}
+
+#label-3 {
+  position:absolute;
+  left:450px; right:0; top:375px;
+  text-align:center;
+}
+

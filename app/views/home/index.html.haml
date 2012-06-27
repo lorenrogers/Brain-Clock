@@ -1,8 +1,18 @@
 .github-link
   %a{:href=>"https://github.com/lorentrogers/Brain-Clock"}
     =image_tag "https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png", :alt=>"Fork me on GitHub"
-.clock-header
-  %h1 BRAIN CLOCK!
-.clock
-  %canvas{:id=>"canvas", :width => "500", :height => "500"}
-    Sorry... This app requres an HTML 5 browser... Try Chrome!
+.clock-container
+  .clock-header
+    %h1 BRAIN CLOCK!
+  .clock-subtitle
+    %h2 Now with hover action.
+  .clock
+    %canvas{:id=>"canvas", :width => "500", :height => "500"}
+      Sorry... This app requres an HTML 5 browser... Try Chrome!
+  #label-1=image_tag "bl0.png", :mouseover => "bl1.png"
+  #label-2=image_tag "bl0.png", :mouseover => "bl2.png"
+  #label-3=image_tag "bl0.png", :mouseover => "bl3.png"
+
+
+
+
