@@ -11,15 +11,10 @@ function clear() { // clear canvas function
 /*
  * Draws an awesome clock hand!
  * Only uses fill for now.
- * 
- * Width and Rotation are both floats from 0-1, corresponding
- * to percentage.
- *
+ * Width and Rotation are both floats from 0-1, corresponding to percentage.
  * For rotation, 0 and 1 are at the top.
- *
  * For width 0.5 fills half of the circle, 0 fills none,
  * and 1 fills all.
- *
  * BUG: There seems to be a problem with using a width <~2
  */
 function drawHand(width, rotation, color) {
@@ -27,7 +22,6 @@ function drawHand(width, rotation, color) {
     var handRadius = Math.PI * 2 * width;
     var theta = ((rotation-(width/2))*Math.PI*2) - (Math.PI/2);
     ctx.rotate(theta);
-
     ctx.beginPath();
     ctx.lineTo(clockRadius, 0);
     ctx.arc(0, 0, clockRadius, 0, handRadius, false);
@@ -35,12 +29,12 @@ function drawHand(width, rotation, color) {
     ctx.closePath();
     ctx.fillStyle = color;
     ctx.fill();
-
     ctx.restore();
 }
 
-function drawScene() { // main drawScene function
-    clear(); // clear canvas
+// main drawScene function
+function drawScene() { 
+    clear();
 
     // get current time
     var date = new Date();
@@ -75,15 +69,20 @@ function drawScene() { // main drawScene function
     ctx.fillStyle = "rgba(3, 3, 3, 0.8)";
     ctx.textAlign = 'center';
     ctx.textBaseline = 'bottom';
-    ctx.fillText(hours, -90, 210);
+    if(hours == 0){
+      var displayHours = 12;
+    } else {
+      var displayHours = hours;
+    }
+    ctx.fillText(displayHours, -90, 210);
     ctx.fillText(minutes, 0, 210);
     ctx.fillText(seconds, 90, 210);
 
+    // Draw Brain (as overlay)
+    ctx.drawImage(clockImage, -250, -250, 500, 500);
+
     //Restore the original context
     ctx.restore();
-
-    // Draw Brain (as overlay)
-    ctx.drawImage(clockImage, 0, 0, 500, 500);
 }
 
 // initialization
@@ -99,3 +98,12 @@ $(function(){
 
     setInterval(drawScene, 1000); // loop drawScene
 });
+
+
+
+
+
+
+
+
+
